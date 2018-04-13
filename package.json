@@ -16,7 +16,6 @@
     "test": "ember test"
   },
   "devDependencies": {
-    "bootstrap": "4.0.0",
     "broccoli-asset-rev": "^2.4.5",
     "ember-cli": "^2.18.2",
     "ember-cli-app-version": "^3.0.0",
