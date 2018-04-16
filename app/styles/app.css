@@ -1,5 +1,9 @@
 @import "overrides.css";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: Roboto,'Titillium Web', sans-serif;
   color: #777;
@@ -240,18 +244,18 @@ body{
 .about-me-panel{
   position: relative;
   margin: 30px 0;
-  padding: 10px 20px;
+  padding: 10px 25px;
   flex-wrap: wrap;
 }
 
 .about-me-photo{
-  width: 250px;
+  width: 275px;
   height: 300px;
-  opacity: 0.85;
 
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0.9;
 }
 
 .about-me-photo:hover{
@@ -259,10 +263,10 @@ body{
 }
 
 .about-me-content{
-  width: 60%;
+  width: 50%;
   height: 300px;
 
-  padding: 10px 25px;
+  padding: 0 25px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -278,6 +282,11 @@ body{
     width: 90%;
     margin: 0 auto;
     margin-top: 30px;
+    padding: 0;
+  }
+
+  .about-me-panel{
+    padding: 0;
   }
 }
 
