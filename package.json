@@ -11,7 +11,13 @@
     "build": "ember build",
     "lint:js": "eslint .",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+    "prepush": "lint-prepush"
+  },
+  "lint-prepush": {
+    "*.js": [
+      "eslint"
+    ]
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.7.0",
@@ -33,6 +39,8 @@
     "ember-resolver": "^4.0.0",
     "ember-source": "~3.3.0",
     "eslint-plugin-ember": "^5.0.0",
+    "husky": "^0.14.3",
+    "lint-prepush": "0.0.2",
     "loader.js": "^4.2.3",
     "qunit-dom": "^0.6.2"
   },
