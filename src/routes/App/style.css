@@ -1,0 +1,41 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Titillium Web', sans-serif;
+  color: #777;
+}
+
+.svg{
+  width: 25px;
+  height: 25px;
+}
+
+.va-mid{
+  vertical-align: sub;
+}
+
+.pull-right{
+  float: right;
+}
+
+.pull-left{
+  float: left;
+}
+
+.position-absolute{
+  position: absolute;
+}
+
+.position-relative{
+  position: relative;
+}
+
+.selection-title-divider{
+  background-color: rgb(3, 196, 235);
+  height: 3px;
+  width: 50px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
