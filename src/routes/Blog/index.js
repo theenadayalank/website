@@ -1,13 +1,9 @@
 import React from 'react';
 import './style.css';
+import Loader from '../../components/Loader';
 
 const Blog = () => (
-  <div className="loading-container">
-    <div className="loader"></div>
-    <div className="loader-text">
-      No Posts! Visit Later...
-    </div>
-  </div>
+  <Loader/>
 )
 
 export default Blog;
