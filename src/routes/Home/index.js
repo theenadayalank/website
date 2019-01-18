@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import './style.scss';
 
 import { ReactComponent as HumanIcon } from './svgs/human.svg';
 import { ReactComponent as HatIcon } from './svgs/hat.svg';
@@ -48,7 +48,7 @@ const Home = () => (
           Searching new technologies over the web is my hobby.
         </p>
         <div className="d-flex justify-content-between about-me-panel">
-          <img src="/img/profile.jpeg" className="rounded about-me-photo" alt="Theenadayaln" width="400" height="300"/>
+          <img src="/img/profile.jpg" className="rounded about-me-photo" alt="Theenadayaln" width="400" height="300"/>
           <div className="about-me-content">
             <div>
               <HumanIcon className="svg va-mid mr-3" />
