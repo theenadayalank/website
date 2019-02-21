@@ -32,6 +32,10 @@ body{
   position: relative;
 }
 
+.text-prim {
+  color: #2196F3;
+}
+
 .selection-title-divider{
   background-color: rgb(3, 196, 235);
   height: 3px;

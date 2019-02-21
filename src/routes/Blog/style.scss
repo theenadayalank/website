@@ -1,0 +1,25 @@
+.blog-header {
+  height: 200px;
+  padding: 40px 5px;
+  background: #EEE;
+}
+
+.blog-container{
+  color: #19334c;
+
+  .blog-item {
+    margin-top: 3.5rem;
+    margin-bottom: 0.5rem;
+
+    .blog-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+  }
+}
+
+.w-900 {
+  width: 900px;
+  max-width: 100%;
+}

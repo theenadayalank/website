@@ -52,7 +52,10 @@ const Projects = () => (
       <div className="project-title-divider"></div>
       <div className="project-card-body">
         <p>This package will run linters on your project for the committed files in your branch</p>
-        <a href="https://github.com/theenadayalank/lint-prepush" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">Code</a>
+        <div className="d-flex justify-content-around">
+          <a href="https://www.npmjs.com/package/lint-prepush" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">NPM</a>
+          <a href="https://github.com/theenadayalank/lint-prepush" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
       </div>
       <div className="project-card-footer">
         <small className="text-muted">11 August 2018</small>

@@ -65,13 +65,18 @@
 }
 
 .about-me-photo{
-  width: 275px;
-  height: 300px;
+  width: 302.4px;
+  height: 403.2px;
 
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   opacity: 0.9;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .about-me-photo:hover{
@@ -80,7 +85,7 @@
 
 .about-me-content{
   width: 50%;
-  height: 300px;
+  height: 350px;
 
   padding: 0 25px;
   display: flex;
@@ -95,7 +100,7 @@
   }
 
   .about-me-content{
-    width: 90%;
+    width: 50%;
     margin: 0 auto;
     margin-top: 30px;
     padding: 0;
