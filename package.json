@@ -3,6 +3,7 @@
   "description": "Source Code of www.theenadayalan.me",
   "author": "Theenadayalan",
   "repository": "https://github.com/theenadayalank/website.git",
+  "homepage" : "https://www.theenadayalan.me",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
