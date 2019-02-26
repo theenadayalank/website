@@ -9,7 +9,7 @@ const Projects = () => (
       </div>
       <div className="project-title-divider"></div>
       <div className="project-card-body">
-        <p>A WebExtension to control all of your youtube tabs such as Pause, Resume, Next, Mute...!</p>
+        <p>YouTabMan is an ultra simple Web Extension to get a control of all of the currently opened YouTube videos in a single point.</p>
         <div className="d-flex justify-content-around">
           <a href="https://chrome.google.com/webstore/detail/youtabman/pfflnpdlbjjkgnelipgknanbnjafijgi" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">Chrome</a>
           <a href="https://addons.mozilla.org/en-US/firefox/addon/youtabman/" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">Firefox</a>
