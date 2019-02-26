@@ -2,6 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Regular.ttf'); /* IE9 Compat Modes */
+  src: url('/fonts/Roboto-Regular.ttf') format('ttf');
+}
+
 body{
   font-family: 'Roboto', 'Titillium Web', sans-serif;
   color: #777;
