@@ -5,6 +5,7 @@ html {
 * {
   box-sizing: border-box;
   outline: none;
+  line-height: 1.8;
 }
 
 @font-face {

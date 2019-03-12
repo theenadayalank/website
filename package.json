@@ -3,7 +3,7 @@
   "description": "Source Code of www.theenadayalan.me",
   "author": "Theenadayalan",
   "repository": "https://github.com/theenadayalank/website.git",
-  "homepage" : "https://www.theenadayalan.me",
+  "homepage": "https://www.theenadayalan.me",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -18,7 +18,7 @@
     "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
-    "react-scripts": "2.1.2"
+    "react-scripts": "2.1.8"
   },
   "eslintConfig": {
     "extends": "react-app"
