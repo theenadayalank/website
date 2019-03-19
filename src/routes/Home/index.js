@@ -60,7 +60,7 @@ const Home = () => (
             </div>
             <div>
               <DesignationIcon className="svg va-mid mr-3" />
-              Front End Web Developer
+              Front End Engineer
             </div>
             <div>
               <WorkIcon className="svg va-mid mr-3" />

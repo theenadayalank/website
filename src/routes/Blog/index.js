@@ -15,7 +15,7 @@ class Blog extends React.Component  {
       <section>
         <header className="blog-header w-900 mx-auto px-5 text-center">
           <h3 className="text-prim">THEENADAYALAN</h3>
-          <p>Front End Web Developer</p>
+          <p>Front End Engineer</p>
           <button className="btn btn-sm btn-light" onClick={() => {this.openExternalLink(`${domainName}/Theenadayalan.pdf`)} }>
             <DownloadIcon className="icon" /> &nbsp;
             Download Resume
