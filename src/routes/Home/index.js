@@ -51,23 +51,23 @@ const Home = () => (
           <img src="/img/profile.jpg" className="rounded about-me-photo" alt="Theenadayaln" width="400" height="300"/>
           <div className="about-me-content">
             <div>
-              <HumanIcon className="svg va-mid mr-3" />
+              <HumanIcon className="svg va-top mr-3" />
               THEENADAYALAN K
             </div>
             <div>
-              <HatIcon className="svg va-mid mr-3" />
+              <HatIcon className="svg va-top mr-3" />
               B.Tech (Computer Science & Engineering)
             </div>
             <div>
-              <DesignationIcon className="svg va-mid mr-3" />
+              <DesignationIcon className="svg va-top mr-3" />
               Front End Engineer
             </div>
             <div>
-              <WorkIcon className="svg va-mid mr-3" />
+              <WorkIcon className="svg va-top mr-3" />
               Zoho Corporation
             </div>
             <div>
-              <CountryIcon className="svg va-mid mr-3" />
+              <CountryIcon className="svg va-top mr-3" />
               India
             </div>
           </div>
