@@ -9,7 +9,7 @@ import { ReactComponent as CountryIcon } from './svgs/country.svg';
 import { ReactComponent as GithubIcon } from './svgs/github-logo.svg';
 import { ReactComponent as TwitterIcon } from './svgs/twitter-logo.svg';
 import { ReactComponent as FacebookIcon } from './svgs/facebook-logo.svg';
-import { ReactComponent as MailIcon } from './svgs/mail.svg';
+import { ReactComponent as GMailIcon } from './svgs/gmail.svg';
 
 const Home = () => (
   <section>
@@ -226,7 +226,7 @@ const Home = () => (
             <FacebookIcon className="svg" />
           </a>
           <a href="mailto:puduvai.theena@gmail.org" >
-            <MailIcon className="svg" />
+            <GMailIcon className="svg" />
           </a>
         </div>
         <span className="small text-muted">
