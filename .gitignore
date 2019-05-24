@@ -6,3 +6,7 @@
 # dependencies
 /bower_components/
 /node_modules/
+
+#misc
+/.cache/
+/public/
