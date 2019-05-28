@@ -7,24 +7,18 @@ import Layout from './../../components/Layout';
 // import { ReactComponent as DownloadIcon } from './svgs/download.svg';
 // import Loader from '../../components/Loader';
 
-function openExternalLink( url = '') {
-  window.open(url, '_blank');
-}
-
-
 const Blog = ({data}) => {
   let posts = data.allMarkdownRemark.edges;
-  let domainName = window.origin;
   return(
       <section>
         <Layout>
           <header className="blog-header w-900 mx-auto px-5 text-center">
             <h3 className="text-prim">THEENADAYALAN</h3>
             <p>Front End Engineer</p>
-            <button className="btn btn-sm btn-light" onClick={() => {openExternalLink(`${domainName}/Theenadayalan.pdf`)} }>
+            <a className="btn btn-sm btn-light" href="/Theenadayalan.pdf" target="_blank">
               {/* <DownloadIcon className="icon" /> &nbsp; */}
-              Download Resume
-            </button>
+              Download Resume 
+            </a>
           </header>
 
           <div className="blog-container w-900 mx-auto px-3">

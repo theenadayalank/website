@@ -14,10 +14,11 @@ While digging deeper into that problem I came to realize the usage of the **loca
 Let's see what it did to my personal website🤔.
 
 As the docs [says](https://guides.emberjs.com/release/configuring-ember/specifying-url-type/), locationType property supports four options📚 
- **history** - this uses HTML5 history API. 
- **auto** (default) - this will use history if the browser supports [history API](https://developer.mozilla.org/en-US/docs/Web/API/History) otherwise it will be hash. 
- **hash** - anchor based URL. 
- **none** - this won't update the URL when you navigate to another route.
+
+  **history** - this uses HTML5 history API. <br>
+  **auto** (default) - this will use history if the browser supports [history API](https://developer.mozilla.org/en-US/docs/Web/API/History) otherwise it will be hash. <br>
+  **hash** - anchor based URL. <br>
+  **none** - this won't update the URL when you navigate to another route.
 
 
 When you create a new Ember project, the default value for locationType would be auto, which means this will use history, if supported by the user's browser ( Most of the modern browser's will support this history API. You can check it out [here](https://caniuse.com/#feat=history) or [here](https://developer.mozilla.org/en-US/docs/Web/API/History#Browser_compatibility) ).
