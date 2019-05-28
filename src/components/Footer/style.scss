@@ -5,18 +5,18 @@
 
   padding: 10px 10%;
   background: #1d1e22;
-  color: #a8abb6;
   letter-spacing: .025em;
   line-height: 1.8em;
   font-size: 20px;
-  height: 100px;
+  height: 150px;
 }
 
 .footer-social-icons a{
   transition: 0.3s;
 }
 
-.footer-social-icons a:hover svg path, .footer-social-icons a:hover svg{
+.footer-social-icons a:hover svg path, 
+.footer-social-icons a:hover svg {
   fill: #FFF;
   transition: 0.3s;
 }
