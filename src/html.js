@@ -17,10 +17,10 @@ export default function HTML(props) {
         <link rel="icon" type="image/png" sizes="32x32" href={'/img/favicon-32.png'}></link>
 
         {/* Preload links */}
-        <link rel="preload" as="image" href={'/img/header-bg.jpg'} />
-        <link rel="preload" as="image" href={'/img/profile.jpg'} />
-        <link rel="preload" as="font" type="font/ttf" href={'/fonts/Muli-Regular.ttf'} crossOrigin="true" />
-        <link rel="preload" as="font" type="font/ttf" href={'/fonts/Roboto-Regular.ttf'} crossOrigin="true" />
+        <link rel="preload" as="image" href={'img/header-bg.jpg'} />
+        <link rel="preload" as="image" href={'img/profile.jpg'} />
+        <link rel="preload" as="font" type="font/ttf" href={'fonts/Muli-Regular.ttf'} crossOrigin="true" />
+        <link rel="preload" as="font" type="font/ttf" href={'fonts/Roboto-Regular.ttf'} crossOrigin="true" />
 
         {props.headComponents}
       </head>

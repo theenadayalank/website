@@ -46,7 +46,7 @@ const Home = () => (
           Searching new technologies over the web is my hobby.
         </p>
         <div className="d-flex justify-content-between about-me-panel">
-          <img src="/img/profile.jpg" className="rounded about-me-photo" alt="Theenadayaln" width="400" height="300"/>
+          <img src={'img/profile.jpg'} className="rounded about-me-photo" alt="Theenadayaln" width="400" height="300"/>
           <div className="about-me-content">
             <div>
               <HumanIcon className="svg va-top mr-3" />
