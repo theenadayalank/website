@@ -4,7 +4,7 @@ import { graphql, Link } from 'gatsby';
 import './style.scss';
 import Layout from './../../components/Layout';
 
-// import { ReactComponent as DownloadIcon } from './svgs/download.svg';
+import DownloadIcon from './../../assets/../assets/download.svg';
 // import Loader from '../../components/Loader';
 
 const Blog = ({data}) => {
@@ -16,7 +16,7 @@ const Blog = ({data}) => {
             <h3 className="text-prim">THEENADAYALAN</h3>
             <p>Front End Engineer</p>
             <a className="btn btn-sm btn-light" href="/Theenadayalan.pdf" target="_blank">
-              {/* <DownloadIcon className="icon" /> &nbsp; */}
+              <DownloadIcon className="icon" /> &nbsp;
               Download Resume 
             </a>
           </header>
