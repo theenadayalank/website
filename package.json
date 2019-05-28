@@ -6,7 +6,7 @@
   "homepage": "https://www.theenadayalan.me",
   "scripts": {
     "serve": "gatsby develop",
-    "build": "gatsby build",
+    "build": "gatsby build --output-dir build",
     "format": "prettier --write src/**/*.{js,jsx}",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
