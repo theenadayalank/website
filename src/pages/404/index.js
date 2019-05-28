@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link } from "gatsby";
 
-import './style.css';
+import './style.scss';
 
 const PageNotFound = () => (
   <div className="page-not-found-container text-center">
