@@ -1,6 +1,6 @@
 import React from 'react';
-import { graphql , Link} from 'gatsby';
-import { Helmet } from 'react-helmet'
+import { graphql, Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 import './style.scss';
 import Layout from './../Layout';
@@ -8,10 +8,10 @@ import Footer from './../Footer';
 
 import 'prismjs/themes/prism-tomorrow.css';
 
-const Template = ({data, pageContext}) => {
-  const { prev, next }  = pageContext;
-  const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark
+const Template = ({ data, pageContext }) => {
+  const { prev, next } = pageContext;
+  const { markdownRemark } = data; // data.markdownRemark holds our post data
+  const { frontmatter, html } = markdownRemark;
 
   return (
     <Layout>
@@ -26,25 +26,33 @@ const Template = ({data, pageContext}) => {
           />
         </div>
         <ul>
-          {prev && <li> <Link to={'blog' + prev.frontmatter.path}>Prev</Link> </li>} 
-          {next && <li> <Link to={'blog' + next.frontmatter.path}>Next</Link> </li>}
+          {prev && (
+            <li>
+              <Link to={'blog' + prev.frontmatter.path}>Prev</Link>
+            </li>
+          )}
+          {next && (
+            <li>
+              <Link to={'blog' + next.frontmatter.path}>Next</Link>
+            </li>
+          )}
         </ul>
       </div>
       <Footer />
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query allBlogPostQuery($pathSlug: String!) {
-    markdownRemark(frontmatter: { path: { eq : $pathSlug }} ) {
-      html,
+    markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
+      html
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
       }
     }
   }
-`
+`;
 
 export default Template;

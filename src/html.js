@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function HTML(props) {
   return (
@@ -14,7 +14,12 @@ export default function HTML(props) {
 
         {/* Title */}
         <title>Theenadayalan | Front End Engineer</title>
-        <link rel="icon" type="image/png" sizes="32x32" href={'/img/favicon-32.png'}></link>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href={'/img/favicon-32.png'}
+        />
 
         {/* 
         
@@ -42,7 +47,7 @@ export default function HTML(props) {
         {props.postBodyComponents}
       </body>
     </html>
-  )
+  );
 }
 
 HTML.propTypes = {
@@ -52,4 +57,4 @@ HTML.propTypes = {
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
   postBodyComponents: PropTypes.array,
-}
+};
