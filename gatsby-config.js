@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -14,7 +15,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: false,
@@ -22,14 +23,23 @@ module.exports = {
             },
           },
           {
-            resolve: "gatsby-remark-external-links",
+            resolve: `gatsby-remark-external-links`,
             options: {
-              target: "_blank",
-              rel: "noopener noreferrer"
-            }
-          }
-        ]
-      }
+              target: '_blank',
+              rel: 'noopener noreferrer',
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -39,12 +49,12 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
-          include: /assets/
-        }
-      }
-    }
+          include: /assets/,
+        },
+      },
+    },
   ],
-}
+};

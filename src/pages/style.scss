@@ -1,9 +1,5 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
-html {
-  scroll-behavior: smooth;
-}
-
 * {
   box-sizing: border-box;
   outline: none;
@@ -32,8 +28,24 @@ body {
   height: 25px;
 }
 
+.icon-xxs {
+  width: 12px;
+  height: 12px;
+}
+
+.icon-link {
+  fill: #007bff;
+  &:hover {
+    fill: #0056b3;
+  }
+}
+
 .va-mid{
   vertical-align: sub;
+}
+
+.va-baseline {
+  vertical-align: baseline;
 }
 
 .va-top{
