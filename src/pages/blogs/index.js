@@ -34,7 +34,7 @@ const Blog = ({ data }) => {
                 >
                   {post.frontmatter.title}
                 </Link>
-                <p className="small text-muted">May 24, 2018</p>
+                <p className="small text-muted">{post.frontmatter.date}</p>
                 <p>{post.excerpt}</p>
               </div>
             );
@@ -52,7 +52,7 @@ export const query = graphql`
         node {
           excerpt(pruneLength: 250, format: PLAIN)
           frontmatter {
-            date
+            date(formatString: "MMMM DD, YYYY")
             path
             title
           }
