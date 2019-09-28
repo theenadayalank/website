@@ -1,7 +1,7 @@
 ---
 path: "setup-reactjs-from-scratch"
 title: "How to set up React.js from scratch without using create-react-app?"
-date: "2019-09-27"
+date: "2019-09-28"
 tags: ['Reactjs', 'Webpack']
 ---
 
@@ -161,16 +161,4 @@ Voila!!! We are done. Let's see the output.
 
 ![Development Server](./devserver.png)
 
-I hope this post is useful in someway for the beginners ❤️. 
-
-
-
-
-
-
-
-
- 
-
-
-
+I hope this post is useful in someway for the beginners ❤️.  
