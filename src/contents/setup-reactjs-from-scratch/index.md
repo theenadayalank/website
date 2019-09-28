@@ -1,6 +1,6 @@
 ---
 path: "setup-reactjs-from-scratch"
-title: "How to set up React.js from scratch without using create-react-app?"
+title: "How to set up React.js app from scratch without using create-react-app?"
 date: "2019-09-28"
 tags: ['Reactjs', 'Webpack']
 ---
