@@ -55,7 +55,7 @@ yarn add -D @babel/core @babel/preset-env @babel/preset-react babel-loader
 ```  
 
 _@babel/core_ - Mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript.  
-_@babel/preset-env_ - @babel/preset-env allows you to use the latest JavaScript.  
+_@babel/preset-env_ - It allows you to use the latest JavaScript.  
 _@babel/preset-react_ - This package is a set of plugins used to support React.js specific features.  
 _babel-loader_ - This package allows transpiling JavaScript files using Babel and webpack.    
   
