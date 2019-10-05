@@ -150,7 +150,7 @@ The size of the CSS file is _**549KB**_. We used only a few classes but the bund
   yarn add -D @fullhuman/postcss-purgecss
 ```
 
-[@fullhuman/postcss-purgecss](https://github.com/FullHuman/postcss-purgecss) - PostCSS plugin for purgecss
+[@fullhuman/postcss-purgecss](https://github.com/FullHuman/postcss-purgecss) - _PostCSS_ plugin for _PurgeCSS_
 
 Configure _postcss.config.js_ to support PurgeCSS.
 
