@@ -44,5 +44,3 @@ Manually configure a regex to match your application's URLs to re-serve index.ht
 >Note: For Netlify, I just ​​followed this [doc](https://www.netlify.com/docs/redirects/#history-pushstate-and-single-page-apps) which guided me to reserve the index.html for all network calls.🙏
 
 Since this is my first blog post, it might look a little hazy. I apologize for the inconvenience.
-
-Surely your comments will inspire me to write more posts! ❤️
