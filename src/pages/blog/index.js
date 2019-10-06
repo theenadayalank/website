@@ -5,7 +5,6 @@ import './style.scss';
 import Layout from './../../components/Layout';
 
 import DownloadIcon from './../../assets/svgs/download.svg';
-// import Loader from '../../components/Loader';
 
 const Blog = ({ data }) => {
   let posts = data.allMarkdownRemark.edges;

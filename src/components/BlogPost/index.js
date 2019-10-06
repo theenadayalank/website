@@ -20,7 +20,7 @@ const Template = ({ data, pageContext }) => {
       <div className="mx-auto blog-post-container">
         <div className="all-post-link">
           <ArrowBack className="icon-xxs icon-link mr-1 va-baseline" />
-          <Link to="blogs/">All Posts</Link>
+          <Link to="blog/">All Posts</Link>
         </div>
         <div className="blog-post">
           <h2>{frontmatter.title}</h2>

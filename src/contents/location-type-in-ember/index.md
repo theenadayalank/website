@@ -7,7 +7,7 @@ tags: ['Ember']
 
 The question **Why do we have locationType property inside config/environment.js in EmberJS application?** raised in my mind when I started to host my personal website in [Ember](https://www.emberjs.com) and used [Netlify](https://www.netlify.com/) for deployment.
 
-When I entered [www.theenadayalan.me/blogs](https://www.theenadayalan.me/blogs) in the URL box, the browser shows that the page was not found🛑.
+When I entered [www.theenadayalan.me/blog](https://www.theenadayalan.me/blog) in the URL box, the browser shows that the page was not found🛑.
 
 While digging deeper into that problem I came to realize the usage of the **locationType** property🙇.
 
@@ -27,7 +27,7 @@ When you create a new Ember project, the default value for locationType would be
 
 When the locationType is set to history or auto, your server will serve index.html for all the URLs configured in your application.
 
-That is because, if you enter [www.theenadayalan.me/blogs](https://www.theenadayalan.me/blogs), the web server will search for the file **/blogs.html** or **/blogs/index.html** which doesn't exist in single page applications. It will throw 'Page Not Found' error for URL's other than your root domain.
+That is because, if you enter [www.theenadayalan.me/blog](https://www.theenadayalan.me/blog), the web server will search for the file **/blog.html** or **/blog/index.html** which doesn't exist in single page applications. It will throw 'Page Not Found' error for URL's other than your root domain.
 
 In Development, the dev-server is managed by Ember-cli which will do this by default. Meanwhile, in production, the web server is handled by our vendor (if we host it using a service ). It doesn't know whether your app is a single page application or traditional multi-page application.
 
