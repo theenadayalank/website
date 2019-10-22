@@ -28,7 +28,7 @@ const Template = ({ data, pageContext }) => {
         <div className="blog-post">
           <h2>{frontmatter.title}</h2>
           <p className="text-muted">{frontmatter.date}</p>
-          <div
+          <article
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
