@@ -33,7 +33,9 @@ const Blog = ({ data }) => {
                 >
                   {post.frontmatter.title}
                 </Link>
-                <p className="small text-muted">{post.frontmatter.date}</p>
+                <p className="text-muted">
+                  <small>{post.frontmatter.date}</small>
+                </p>
                 <p>{post.excerpt}</p>
               </div>
             );

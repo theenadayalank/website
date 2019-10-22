@@ -163,9 +163,7 @@ const Home = () => (
                   <div className="timeline-title">
                     {education.courseName} &nbsp;
                     { education.department && 
-                      <span className="small text-muted">
-                      ({education.department})
-                      </span>
+                      <small className="text-muted"> ({education.department}) </small>
                     }
                     &nbsp;
                     <span className="course-duration">{education.batch}</span>
