@@ -2,23 +2,15 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 const Header = () => (
-  <div className="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
-    <Link to="/" className="navbar-brand">
-      TD
-    </Link>
+  <header className="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+    <Link to="/" className="navbar-brand"> TD </Link>
 
-    <div className="navbar-nav">
-      <Link to="/" className="nav-item nav-link">
-        Home
-      </Link>
-      <Link to="/projects/" className="nav-item nav-link">
-        Projects
-      </Link>
-      <Link to="/blog/" className="nav-item nav-link">
-        Blog
-      </Link>
-    </div>
-  </div>
+    <nav className="navbar-nav">
+      <Link to="/" className="nav-item nav-link" activeClassName="active"> Home </Link>
+      <Link to="/projects/" className="nav-item nav-link" activeClassName="active"> Projects </Link>
+      <Link to="/blog/" className="nav-item nav-link" activeClassName="active"> Blog </Link>
+    </nav>
+  </header>
 );
 
 export default Header;

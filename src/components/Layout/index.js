@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
         <title>Theenadayalan | Front End Engineer</title>
       </Helmet>
       <Header />
-      <div className="navbar-nav">{children}</div>
+      <section className="navbar-nav">{children}</section>
     </div>
   );
 };
