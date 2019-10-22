@@ -9,6 +9,39 @@ import DesignationIcon from './../../assets/svgs/designation.svg';
 import WorkIcon from './../../assets/svgs/work.svg';
 import CountryIcon from './../../assets/svgs/country.svg';
 
+const educationHistory = [{
+  courseName: 'Bachelor Of Technology',
+  department: 'Computer Science & Engineering',
+  batch: '2013-2017',
+  institution: 'Sri Manakula Vinayagar Enigneering College',
+  location: 'Pondicherry'
+}, {
+  courseName: 'Higher Secondary',
+  department: 'Biology',
+  batch: '2011-2013',
+  institution: 'Bonne Nehru Higher Secondary School',
+  location: 'Thirukkanur'
+}, {
+  courseName: 'SSLC',
+  batch: '2010-2011',
+  institution: 'Government High School',
+  location: 'Sorapet'
+}];
+
+const skillsetMap =[{
+  name: 'EmberJs',
+  width: '70%'
+}, {
+  name: 'HTML & CSS',
+  width: '90%'
+}, {
+  name: 'JavaScript',
+  width: '85%'
+}, {
+  name: 'Music & Fun',
+  width: '100%'
+}];
+
 const Home = () => (
   <section>
     {/* Getting Started */}
@@ -35,7 +68,7 @@ const Home = () => (
       <div className="container">
         <h3 className="text-center">ABOUT ME</h3>
         <div className="selection-title-divider" />
-        <p className="text-center">
+        <p className="text-center text-muted">
           <em>I love Coding!</em>
         </p>
         <p className="font-md">
@@ -97,30 +130,16 @@ const Home = () => (
           </p>
         </div>
         <div className="skillset-panel">
-          <p>EmberJs</p>
-          <div className="skillset-bar">
-            <div className="skillset-acquired" style={{ width: '70%' }}>
-              70%
+          { skillsetMap.map((skill,index) => 
+            <div key={index} >
+              <p>{skill.name}</p>
+              <div className="skillset-bar">
+                <div className="skillset-acquired" style={{ width: skill.width }}>
+                  {skill.width}
+                </div>
+              </div>
             </div>
-          </div>
-          <p>HTML & CSS</p>
-          <div className="skillset-bar">
-            <div className="skillset-acquired" style={{ width: '90%' }}>
-              90%
-            </div>
-          </div>
-          <p>JavaScript</p>
-          <div className="skillset-bar">
-            <div className="skillset-acquired" style={{ width: '85%' }}>
-              85%
-            </div>
-          </div>
-          <p>Music & Fun</p>
-          <div className="skillset-bar">
-            <div className="skillset-acquired" style={{ width: '100%' }}>
-              100%
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
@@ -131,62 +150,34 @@ const Home = () => (
         <div className="edu-header text-center">
           <h4>EDUCATION</h4>
           <div className="selection-title-divider" />
-          <p className="text-center">
+          <p className="text-center text-muted">
             <em>An Educational Journey!</em>
           </p>
         </div>
         <ul className="edu-timeline">
-          <li>
-            <div className="timeline-icon" />
-            <div className="timeline-panel">
-              <div className="timeline-header">
-                <div className="timeline-title">
-                  Bachelor Of Technology
-                  <span className="small text-muted">
-                    (Computer Science & Engineering)
-                  </span>
-                  &nbsp;
-                  <span className="course-duration">2013-2017</span>
+          {educationHistory.map((education, index) => 
+            <li key={index}>
+              <div className="timeline-icon" />
+              <div className={ "timeline-panel " + (index % 2 !== 0 && "pull-right") }>
+                <div className="timeline-header">
+                  <div className="timeline-title">
+                    {education.courseName} &nbsp;
+                    { education.department && 
+                      <span className="small text-muted">
+                      ({education.department})
+                      </span>
+                    }
+                    &nbsp;
+                    <span className="course-duration">{education.batch}</span>
+                  </div>
+                </div>
+                <div className="timeline-content">
+                  {education.institution} <br />
+                  {education.location}
                 </div>
               </div>
-              <div className="timeline-content">
-                Sri Manakula Vinayagar Enigneering College <br />
-                Pondicherry
-              </div>
-            </div>
-          </li>
-          <li>
-            <div className="timeline-icon" />
-            <div className="timeline-panel pull-right">
-              <div className="timeline-header">
-                <div className="timeline-title">
-                  Higher Secondary
-                  <span className="small text-muted">(Biology)</span>
-                  &nbsp;
-                  <span className="course-duration">2011-2013</span>
-                </div>
-              </div>
-              <div className="timeline-content">
-                Bonne Nehru Higher Secondary School <br />
-                Thirukkanur
-              </div>
-            </div>
-          </li>
-          <li>
-            <div className="timeline-icon" />
-            <div className="timeline-panel">
-              <div className="timeline-header">
-                <div className="timeline-title">
-                  SSLC &nbsp;
-                  <span className="course-duration">2010-2011</span>
-                </div>
-              </div>
-              <div className="timeline-content">
-                Government High School <br />
-                Sorapet
-              </div>
-            </div>
-          </li>
+            </li>
+          )}
         </ul>
       </div>
     </div>
@@ -197,15 +188,21 @@ const Home = () => (
         <h4>Experience</h4>
         <div className="selection-title-divider" />
       </div>
-      <p className="text-center">
+      <p className="text-center text-muted">
         <em>Reflection of My Educational Journey!</em>
       </p>
       <div className="container">
         <div className="career-panel">
-          <h5>Member Technical Staff / Zoho Corporation</h5>
-          <h6 className="career-duration-color">
-            Jun 2017 - <span className="label-present">Current</span>
-          </h6>
+          <div className="d-flex justify-content-between pb-3">
+            <div>
+              <div className="font-md">Front End Engineer</div>
+              <div className="text-muted">Zoho Corporation, India</div>
+            </div>
+            <div className="text-muted">
+              Jun 2017 - Present
+            </div>
+          </div>
+
           <ul>
             <li>Maintaining an Internal testing tool written on top of the EmberJS.</li>
             <li>Working on a developer-friendly web plugin to help the developer to write better code by showing insights of each REST API the developer make.</li>
