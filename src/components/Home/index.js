@@ -206,11 +206,11 @@ const Home = () => (
           <h6 className="career-duration-color">
             Jun 2017 - <span className="label-present">Current</span>
           </h6>
-          <p className="font-md">
-            I have been working here as a full time Front End Web Developer.
-            EmberJs is a JavaScript web framework which we are using to develop
-            complex and ambitious web applications.
-          </p>
+          <ul>
+            <li>Maintaining an Internal testing tool written on top of the EmberJS.</li>
+            <li>Working on a developer-friendly web plugin to help the developer to write better code by showing insights of each REST API the developer make.</li>
+            <li>Domain experience in Finance and Accounting.</li>
+          </ul>
           <hr />
         </div>
       </div>
