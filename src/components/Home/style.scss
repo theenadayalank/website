@@ -1,7 +1,7 @@
 
 /* Header */
 
-.home-header{
+.home-header {
   position: relative;
   opacity: 0.75;
   height: 95vh;
@@ -17,7 +17,7 @@
   background-image: url('/img/header-bg.jpg');
 }
 
-.home-header-content{
+.home-header-content {
   position: absolute;
   top: 35%;
   left: 50%;
@@ -25,12 +25,12 @@
   color: #e9ecef;
 }
 
-.home-header-button{
+.home-header-button {
   border-radius: 200px !important;
   box-shadow: 0px 2px 10px black;
 }
 
-.home-header-title{
+.home-header-title {
   text-transform: uppercase;
   font-size: 32px;
   line-height: 4.5rem;
@@ -53,18 +53,18 @@
 
 
 /*** About Me ***/
-.about-me-container{
+.about-me-container {
   padding: 40px 10px;
 }
 
-.about-me-panel{
+.about-me-panel {
   position: relative;
   margin: 30px 0;
   padding: 10px 25px;
   flex-wrap: wrap;
 }
 
-.about-me-photo{
+.about-me-photo {
   width: 302.4px;
   height: 403.2px;
 
@@ -79,11 +79,11 @@
   }
 }
 
-.about-me-photo:hover{
+.about-me-photo:hover {
   opacity: 1;
 }
 
-.about-me-content{
+.about-me-content {
   width: 60%;
   height: 350px;
 
