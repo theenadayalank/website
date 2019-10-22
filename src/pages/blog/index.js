@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 import './style.scss';
 import Layout from './../../components/Layout';
@@ -10,6 +11,7 @@ const Blog = ({ data }) => {
   let posts = data.allMarkdownRemark.edges;
   return (
     <section>
+      <Helmet title="Blog - Theenadayalan | Front End Engineer" />
       <Layout>
         <header className="blog-header w-900 mx-auto px-5 text-center">
           <h3 className="text-prim">THEENADAYALAN</h3>
