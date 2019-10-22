@@ -7,6 +7,7 @@ export default function HTML(props) {
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <meta name="description" content="I'm Theenadayalan. I Work as a Front End Engineer at Zoho." />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
