@@ -9,9 +9,9 @@ import GMailIcon from './../../assets/svgs/gmail.svg';
 
 const Loader = () => {
   return (
-    <div className="footer-container">
+    <footer className="footer-container">
       <div>
-        <div className="footer-social-icons d-flex justify-content-between">
+        <div className="footer-social-icons d-flex justify-content-between pb-3">
           <a
             href="https://github.com/theenadayalank"
             target="_blank"
@@ -39,7 +39,7 @@ const Loader = () => {
         </div>
         <div className="small text-muted">&copy; Theenadayalan 2019 </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
