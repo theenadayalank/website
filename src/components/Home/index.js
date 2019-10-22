@@ -81,7 +81,7 @@ const Home = () => (
           I am a self-motivated and talented young software engineer who has
           been working in the field of Web Development in a well-established
           product based company. I have been building responsive web-based
-          applications in an effective manner. I am also good in <b>EmberJs</b>
+          applications in an effective manner. I am also good in <b>EmberJs </b>
           which is a popular JavaScript framework for developing single page
           application. Searching new technologies over the web is my hobby.
         </p>
