@@ -53,10 +53,13 @@ _src/style.css_
   yarn add -D postcss postcss-loader css-loader mini-css-extract-plugin
 ```
 
-_postcss_ - CSS transformation tool.  
-_css-loader_ -  Interprets _@import_ and _url()_ like _import/require()_.  
-_mini-css-extract-plugin_ - Extracts CSS into separate files, say _style.css_.  
-_postcss-loader_ - PostCSS loader for webpack.  
+_postcss_ - CSS transformation tool.
+
+_css-loader_ -  Interprets _@import_ and _url()_ like _import/require()_.
+
+_mini-css-extract-plugin_ - Extracts CSS into separate files, say _style.css_.
+
+_postcss-loader_ - PostCSS loader for webpack.
 
 Let's add the webpack configurations.
 

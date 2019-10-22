@@ -33,7 +33,8 @@ Install the following packages.
 yarn add react and react-dom
 ```
 
-_react_ - React.js library.  
+_react_ - React.js library.
+
 _react-dom_ - This package serves as the entry point to the DOM and server renderers for React.  
   
   
@@ -43,10 +44,13 @@ _react-dom_ - This package serves as the entry point to the DOM and server rende
 yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin
 ```  
 
-_webpack_ - Webpack is a bundler for modules.  
-_webpack-cli_ - Command Line interface for webpack.  
-_webpack-dev-server_ - Development server that provides live reloading.  
-_html-webpack-plugin_ - The HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bundles.  
+_webpack_ - Webpack is a bundler for modules.
+
+_webpack-cli_ - Command Line interface for webpack.
+
+_webpack-dev-server_ - Development server that provides live reloading.
+
+_html-webpack-plugin_ - The HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bundles.
 
 #### Setup Babel
 
@@ -54,10 +58,13 @@ _html-webpack-plugin_ - The HtmlWebpackPlugin simplifies creation of HTML files 
 yarn add -D @babel/core @babel/preset-env @babel/preset-react babel-loader
 ```  
 
-_@babel/core_ - Mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript.  
-_@babel/preset-env_ - It allows you to use the latest JavaScript.  
-_@babel/preset-react_ - This package is a set of plugins used to support React.js specific features.  
-_babel-loader_ - This package allows transpiling JavaScript files using Babel and webpack.    
+_@babel/core_ - Mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript.
+
+_@babel/preset-env_ - It allows you to use the latest JavaScript.
+
+_@babel/preset-react_ - This package is a set of plugins used to support React.js specific features.
+
+_babel-loader_ - This package allows transpiling JavaScript files using Babel and webpack.
   
 ### Configuration
 
