@@ -173,7 +173,7 @@ const Home = () => (
                 </div>
                 <div className="timeline-content">
                   {education.institution} <br />
-                  {education.location}
+                  <span className="text-muted">{education.location}</span>
                 </div>
               </div>
             </li>
