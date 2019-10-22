@@ -38,13 +38,13 @@ const Home = () => (
         <p className="text-center">
           <em>I love Coding!</em>
         </p>
-        <p>
+        <p className="font-md">
           Long ago, actually not so long a graduate in Computer Science and
           Engineering from Pondicherry University and forwarding now as a
           Software Engineer with sufficient knowledge even to teach a layman.
           Come let us pop into my skills.
         </p>
-        <p>
+        <p className="font-md">
           I am a self-motivated and talented young software engineer who has
           been working in the field of Web Development in a well-established
           product based company. I have been building responsive web-based
@@ -206,7 +206,7 @@ const Home = () => (
           <h6 className="career-duration-color">
             Jun 2017 - <span className="label-present">Current</span>
           </h6>
-          <p>
+          <p className="font-md">
             I have been working here as a full time Front End Web Developer.
             EmberJs is a JavaScript web framework which we are using to develop
             complex and ambitious web applications.

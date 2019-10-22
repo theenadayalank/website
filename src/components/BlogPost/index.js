@@ -4,10 +4,13 @@ import { Helmet } from 'react-helmet';
 import 'prismjs/themes/prism-tomorrow.css';
 
 import './style.scss';
+
 import Layout from './../Layout';
 import Footer from './../Footer';
 
 import ArrowBack from './../../assets/svgs/arrow-back.svg';
+import LeftArrow from './../../assets/svgs/left-arrow.svg';
+import RightArrow from './../../assets/svgs/right-arrow.svg';
 
 const Template = ({ data, pageContext }) => {
   const { prev, next } = pageContext;
@@ -30,6 +33,7 @@ const Template = ({ data, pageContext }) => {
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
+
         <div className="blog-post-footer">
           Have any questions or comments about this post? Email me at{' '}
           <a href="mailto:puduvai.theena@gmail.com">puduvai.theena@gmail.com</a>{' '}
@@ -39,18 +43,25 @@ const Template = ({ data, pageContext }) => {
           </a>
           .
         </div>
-        <ul>
-          {prev && (
-            <li>
-              <Link to={'blog/' + prev.frontmatter.path}>Prev</Link>
-            </li>
-          )}
-          {next && (
-            <li>
-              <Link to={'blog/' + next.frontmatter.path}>Next</Link>
-            </li>
-          )}
-        </ul>
+
+        <div className="d-flex justify-content-between blog-pagination">
+          <div>
+            {prev && (
+              <Link className="previous" to={'blog/' + prev.frontmatter.path}>
+                <LeftArrow className="svg icon-sm icon-white" /> &nbsp; Previous
+                Blog
+              </Link>
+            )}
+          </div>
+          <div>
+            {next && (
+              <Link className="next" to={'blog/' + next.frontmatter.path}>
+                <RightArrow className="svg icon-sm icon-white" /> &nbsp; Next
+                Blog
+              </Link>
+            )}
+          </div>
+        </div>
       </div>
       <Footer />
     </Layout>
