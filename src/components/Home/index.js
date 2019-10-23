@@ -87,7 +87,7 @@ const Home = () => (
         </p>
         <div className="d-flex justify-content-between about-me-panel">
           <img
-            src={'img/profile.jpg'}
+            src={'img/profile.webp'}
             className="rounded about-me-photo"
             alt="Theenadayaln"
             width="400"

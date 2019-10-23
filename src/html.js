@@ -27,8 +27,8 @@ export default function HTML(props) {
           Preload links - need to use rootUrl
 
         */}
-        {/* <link rel="preload" as="image" href={'/img/header-bg.jpg'} />
-        <link rel="preload" as="image" href={'/img/profile.jpg'} />
+        {/* <link rel="preload" as="image" href={'/img/header-bg.webp'} />
+        <link rel="preload" as="image" href={'/img/profile.webp'} />
         <link rel="preload" as="font" type="font/ttf" href={'/fonts/Muli-Regular.ttf'} crossOrigin="true" />
         <link rel="preload" as="font" type="font/ttf" href={'/fonts/Roboto-Regular.ttf'} crossOrigin="true" /> */}
 
