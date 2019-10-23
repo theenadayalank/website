@@ -27,8 +27,8 @@ export default function HTML(props) {
         <link rel="preload" as="image" href={'/img/profile.webp'} />
         <link rel="preload" as="font" type="font/ttf" href={'/fonts/Muli-Regular.ttf'} crossOrigin="true" />
         <link rel="preload" as="font" type="font/ttf" href={'/fonts/Roboto-Regular.ttf'} crossOrigin="true" /> 
+        <link rel="preload" as="font" type="font/ttf" href={'/fonts/Domine-Regular.ttf'} crossOrigin="true" /> 
        
-
         {props.headComponents}
       </head>
 
