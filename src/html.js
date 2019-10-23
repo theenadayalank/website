@@ -23,7 +23,7 @@ export default function HTML(props) {
         />
 
         {/*  Preload links - need to use rootUrl */}
-
+        {/* Disabling preload due to this issue - https://github.com/gatsbyjs/gatsby/issues/13074 */}
         {/* <link rel="preload" as="image" href={'/img/header-bg.webp'} />
         <link rel="preload" as="image" href={'/img/profile.webp'} />
         <link rel="preload" as="font" type="font/ttf" href={'/fonts/Muli-Regular.ttf'} crossOrigin="true" />
