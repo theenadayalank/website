@@ -112,7 +112,7 @@ const Home = () => (
             </div>
             <div>
               <CountryIcon className="svg va-mid mr-3" />
-              India
+              Chennai, India
             </div>
           </div>
         </div>
