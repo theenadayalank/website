@@ -89,7 +89,7 @@ const Home = () => (
           <img
             src={'img/profile.webp'}
             className="rounded about-me-photo"
-            alt="Theenadayaln"
+            alt="Theenadayalan"
             width="400"
             height="300"
           />
