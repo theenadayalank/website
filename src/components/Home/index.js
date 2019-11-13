@@ -9,38 +9,47 @@ import DesignationIcon from './../../assets/svgs/designation.svg';
 import WorkIcon from './../../assets/svgs/work.svg';
 import CountryIcon from './../../assets/svgs/country.svg';
 
-const educationHistory = [{
-  courseName: 'Bachelor Of Technology',
-  department: 'Computer Science & Engineering',
-  batch: '2013-2017',
-  institution: 'Sri Manakula Vinayagar Enigneering College',
-  location: 'Pondicherry'
-}, {
-  courseName: 'Higher Secondary',
-  department: 'Biology',
-  batch: '2011-2013',
-  institution: 'Bonne Nehru Higher Secondary School',
-  location: 'Thirukkanur'
-}, {
-  courseName: 'SSLC',
-  batch: '2010-2011',
-  institution: 'Government High School',
-  location: 'Sorapet'
-}];
+const educationHistory = [
+  {
+    courseName: 'Bachelor Of Technology',
+    department: 'Computer Science & Engineering',
+    batch: '2013-2017',
+    institution: 'Sri Manakula Vinayagar Enigneering College',
+    location: 'Pondicherry',
+  },
+  {
+    courseName: 'Higher Secondary',
+    department: 'Biology',
+    batch: '2011-2013',
+    institution: 'Bonne Nehru Higher Secondary School',
+    location: 'Thirukkanur',
+  },
+  {
+    courseName: 'SSLC',
+    batch: '2010-2011',
+    institution: 'Government High School',
+    location: 'Sorapet',
+  },
+];
 
-const skillsetMap =[{
-  name: 'EmberJs',
-  width: '70%'
-}, {
-  name: 'HTML & CSS',
-  width: '90%'
-}, {
-  name: 'JavaScript',
-  width: '85%'
-}, {
-  name: 'Music & Fun',
-  width: '100%'
-}];
+const skillsetMap = [
+  {
+    name: 'EmberJs',
+    width: '70%',
+  },
+  {
+    name: 'HTML & CSS',
+    width: '90%',
+  },
+  {
+    name: 'JavaScript',
+    width: '85%',
+  },
+  {
+    name: 'Music & Fun',
+    width: '100%',
+  },
+];
 
 const Home = () => (
   <section>
@@ -87,7 +96,7 @@ const Home = () => (
         </p>
         <div className="d-flex justify-content-between about-me-panel">
           <img
-            src={'img/profile.webp'}
+            src={'img/profile.jpg'}
             className="rounded about-me-photo"
             alt="Theenadayalan"
             width="400"
@@ -130,16 +139,19 @@ const Home = () => (
           </p>
         </div>
         <div className="skillset-panel">
-          { skillsetMap.map((skill,index) => 
-            <div key={index} >
+          {skillsetMap.map((skill, index) => (
+            <div key={index}>
               <p>{skill.name}</p>
               <div className="skillset-bar">
-                <div className="skillset-acquired" style={{ width: skill.width }}>
+                <div
+                  className="skillset-acquired"
+                  style={{ width: skill.width }}
+                >
                   {skill.width}
                 </div>
               </div>
             </div>
-          )}
+          ))}
         </div>
       </div>
     </div>
@@ -155,16 +167,23 @@ const Home = () => (
           </p>
         </div>
         <ul className="edu-timeline">
-          {educationHistory.map((education, index) => 
+          {educationHistory.map((education, index) => (
             <li key={index}>
               <div className="timeline-icon" />
-              <div className={ "timeline-panel " + (index % 2 !== 0 && "pull-right") }>
+              <div
+                className={
+                  'timeline-panel ' + (index % 2 !== 0 && 'pull-right')
+                }
+              >
                 <div className="timeline-header">
                   <div className="timeline-title">
                     {education.courseName} &nbsp;
-                    { education.department && 
-                      <small className="text-muted"> ({education.department}) </small>
-                    }
+                    {education.department && (
+                      <small className="text-muted">
+                        {' '}
+                        ({education.department}){' '}
+                      </small>
+                    )}
                     &nbsp;
                     <span className="course-duration">{education.batch}</span>
                   </div>
@@ -175,7 +194,7 @@ const Home = () => (
                 </div>
               </div>
             </li>
-          )}
+          ))}
         </ul>
       </div>
     </div>
@@ -196,14 +215,19 @@ const Home = () => (
               <div className="font-md">Front End Engineer</div>
               <div className="text-muted">Zoho Corporation, India</div>
             </div>
-            <div className="text-muted">
-              Jun 2017 - Present
-            </div>
+            <div className="text-muted">Jun 2017 - Present</div>
           </div>
 
           <ul>
-            <li>Maintaining an Internal testing tool written on top of the EmberJS.</li>
-            <li>Working on a developer-friendly web plugin to help the developer to write better code by showing insights of each REST API the developer make.</li>
+            <li>
+              Maintaining an Internal testing tool written on top of the
+              EmberJS.
+            </li>
+            <li>
+              Working on a developer-friendly web plugin to help the developer
+              to write better code by showing insights of each REST API the
+              developer make.
+            </li>
             <li>Domain experience in Finance and Accounting.</li>
           </ul>
           <hr />
