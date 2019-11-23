@@ -7,7 +7,10 @@ export default function HTML(props) {
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta name="description" content="I'm Theenadayalan working as a Front End Engineer at Zoho Corporation, India." />
+        <meta
+          name="description"
+          content="I'm Theenadayalan working as a Front End Engineer at Zoho Corporation, India."
+        />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -27,7 +30,7 @@ export default function HTML(props) {
           <link rel="preload" as="font" type="font/ttf" href={'/fonts/Roboto-Regular.ttf'} crossOrigin="true" /> 
           <link rel="preload" as="font" type="font/ttf" href={'/fonts/Domine-Regular.ttf'} crossOrigin="true" />  
         */}
-       
+
         {props.headComponents}
       </head>
 

@@ -38,7 +38,7 @@ const Template = ({ data, pageContext }) => {
           Have any questions or comments about this post? Email me at{' '}
           <a href="mailto:puduvai.theena@gmail.com">puduvai.theena@gmail.com</a>{' '}
           or contact me on Twitter at{' '}
-          <a href="https://twitter.com/theenadayalan_k" target="_blank">
+          <a href="https://twitter.com/theenadayalan_k" target="_blank" rel="noopener noreferrer">
             @theenadayalan_k
           </a>
           .

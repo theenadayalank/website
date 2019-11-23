@@ -1,18 +1,8 @@
 module.exports = {
-  parser: "babel-eslint",
-  extends: [
-    "prettier"
-  ],
-  plugins: [
-    "prettier"
-  ],
-  rules: {
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": true,
-        "trailingComma": "all",
-      }
-    ]
+  globals: {
+    __PATH_PREFIX__: true,
   },
+  extends: `react-app`,
+  rules: {
+  }
 }

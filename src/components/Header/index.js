@@ -3,12 +3,12 @@ import { Link } from 'gatsby';
 
 const Header = () => (
   <header className="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
-    <Link to="/" className="navbar-brand"> TD </Link>
+    <Link to="/" className="navbar-brand">THEENA</Link>
 
     <nav className="navbar-nav">
-      <Link to="/" className="nav-item nav-link" activeClassName="active"> Home </Link>
-      <Link to="/projects/" className="nav-item nav-link" activeClassName="active"> Projects </Link>
-      <Link to="/blog/" className="nav-item nav-link" activeClassName="active"> Blog </Link>
+      <Link to="/" className="nav-item nav-link" activeClassName="active">Home</Link>
+      <Link to="/projects/" className="nav-item nav-link" activeClassName="active">Projects</Link>
+      <Link to="/blog/" className="nav-item nav-link" activeClassName="active">Blog</Link>
     </nav>
   </header>
 );
