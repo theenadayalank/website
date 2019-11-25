@@ -87,8 +87,20 @@
   }
 }
 
-
-
+.progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  .progress-bar {
+    height: 1px;
+    width: 0;
+    background: #f26a3d;
+    box-shadow: 0 0 1px#f26a3d,0 0 3px #f26a3d;
+    transition: width 0.1s ease-out;
+  }
+}
 
 
 /**
