@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 const Header = () => (
-  <header className="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+  <header className="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between" id="nav-header">
     <Link to="/" className="navbar-brand">THEENA</Link>
 
     <nav className="navbar-nav">

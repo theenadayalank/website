@@ -9,7 +9,7 @@ import GMailIcon from './../../assets/svgs/gmail.svg';
 
 const Loader = () => {
   return (
-    <footer className="footer-container">
+    <footer className="footer-container" id="footer-container">
       <div>
         <div className="footer-social-icons d-flex justify-content-between pb-3">
           <a
