@@ -37,7 +37,7 @@ const Loader = () => {
             <GMailIcon className="svg" />
           </a>
         </div>
-        <small className="text-muted">&copy; Theenadayalan 2019 </small>
+        <small className="text-muted">&copy; Theenadayalan 2020 </small>
       </div>
     </footer>
   );
