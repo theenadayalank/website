@@ -30,7 +30,7 @@ Install the following packages.
 #### Setup React.js
 
 ```shell
-yarn add react and react-dom
+yarn add react react-dom
 ```
 
 _react_ - React.js library.
