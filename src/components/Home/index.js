@@ -117,11 +117,11 @@ const Home = () => (
             </div>
             <div>
               <WorkIcon className="svg va-mid mr-3" />
-              Zoho Corporation
+              Byju's The Learning App (Think and Learn Pt Ltd)
             </div>
             <div>
               <CountryIcon className="svg va-mid mr-3" />
-              Chennai, India
+              Bangalore, India
             </div>
           </div>
         </div>
