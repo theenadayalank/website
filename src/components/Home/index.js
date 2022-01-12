@@ -8,6 +8,7 @@ import HatIcon from './../../assets/svgs/hat.svg';
 import DesignationIcon from './../../assets/svgs/designation.svg';
 import WorkIcon from './../../assets/svgs/work.svg';
 import CountryIcon from './../../assets/svgs/country.svg';
+import Career from './Career';
 
 const educationHistory = [
   {
@@ -34,18 +35,18 @@ const educationHistory = [
 
 const skillsetMap = [
   {
+    name: 'ReactJs',
+    width: '50%'
+  }, {
     name: 'EmberJs',
     width: '70%',
-  },
-  {
+  }, {
     name: 'HTML & CSS',
     width: '90%',
-  },
-  {
+  }, {
     name: 'JavaScript',
     width: '85%',
-  },
-  {
+  }, {
     name: 'Music & Fun',
     width: '100%',
   },
@@ -200,40 +201,7 @@ const Home = () => (
     </div>
 
     {/* Career */}
-    <div className="career-container">
-      <div className="text-center text-uppercase">
-        <h4>Experience</h4>
-        <div className="selection-title-divider" />
-      </div>
-      <p className="text-center text-muted">
-        <em>Reflection of My Educational Journey!</em>
-      </p>
-      <div className="container">
-        <div className="career-panel">
-          <div className="d-flex justify-content-between pb-3">
-            <div>
-              <div className="font-md">Front End Engineer</div>
-              <div className="text-muted">Zoho Corporation, India</div>
-            </div>
-            <div className="text-muted">Jun 2017 - Present</div>
-          </div>
-
-          <ul>
-            <li>
-              Maintaining an Internal testing tool written on top of the
-              EmberJS.
-            </li>
-            <li>
-              Working on a developer-friendly web plugin to help the developer
-              to write better code by showing insights of each REST API the
-              developer make.
-            </li>
-            <li>Domain experience in Finance and Accounting.</li>
-          </ul>
-          <hr />
-        </div>
-      </div>
-    </div>
+    <Career />
 
     <Footer />
   </section>
