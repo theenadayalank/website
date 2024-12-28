@@ -18,7 +18,7 @@ const Blog = ({ data }) => {
           <p>Front End Engineer</p>
           <a
             className="btn btn-sm btn-light"
-            href="/Theenadayalan.pdf"
+            href="/Theenadayalan_Resume.pdf"
             target="_blank"
           >
             <DownloadIcon className="icon" /> &nbsp; Download Resume
