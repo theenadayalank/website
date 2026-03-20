@@ -38,6 +38,16 @@ Visit [http://localhost:3000](http://localhost:3000).
 pnpm build
 ```
 
+### Where does the build go?
+
+| Path | Purpose |
+|------|---------|
+| **`.next/`** | **`pnpm build` writes here.** Compiled app, server bundles, static assets for production. This folder is **not** committed to git. Run `pnpm start` to serve it. |
+| **`public/`** | **Static files you add** (images, PDF, `favicon.ico`). Next.js serves them at the site root (e.g. `public/img/x.jpg` → `/img/x.jpg`). **Build output is never written into `public/`.** |
+| **`out/`** | Only if you enable [static export](https://nextjs.org/docs/app/building-your-application/deploying/static-exports) (`output: 'export'` in `next.config`). Then `pnpm build` produces a static site in `out/`, still **not** in `public/`. |
+
+So: **`public/` = your static assets only; `.next/` = build output.**
+
 ## Production
 
 ```bash

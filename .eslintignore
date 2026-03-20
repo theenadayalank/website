@@ -1,13 +1,6 @@
-# compiled output
-/dist/
-/tmp/
-/build/
-/public/
-
-# dependencies
-/bower_components/
-/node_modules/
-
-#misc
-/.cache/
-/.next/
+node_modules
+.next
+out
+dist
+build
+pnpm-lock.yaml
