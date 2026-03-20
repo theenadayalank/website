@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #0f172a;
+  --background: #ffffff;
+  --primary: #0ea5e9;
+  --primary-dark: #0284c7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #f8fafc;
+    --background: #0f172a;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  line-height: 1.7;
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-6;
+  }
+  .container-narrow {
+    @apply max-w-3xl mx-auto;
+  }
+  .container-wide {
+    @apply max-w-5xl mx-auto;
+  }
+}
+
+/* Prose for blog content */
+.prose-blog h1,
+.prose-blog h2,
+.prose-blog h3 {
+  @apply font-semibold mt-8 mb-3;
+}
+.prose-blog h2 { @apply text-xl; }
+.prose-blog h3 { @apply text-lg; }
+.prose-blog p { @apply mb-4; }
+.prose-blog ul, .prose-blog ol { @apply mb-4 pl-6; }
+.prose-blog li { @apply mb-1; }
+.prose-blog a { @apply text-primary hover:underline; }
+.prose-blog blockquote { @apply border-l-4 border-primary/50 pl-4 italic my-4 text-slate-600; }
+.prose-blog pre {
+  @apply overflow-x-auto rounded-lg bg-slate-900 text-slate-100 p-4 my-4 text-sm;
+}
+.prose-blog code {
+  @apply bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded text-sm;
+}
+.prose-blog pre code { @apply bg-transparent p-0; }
+.prose-blog img { @apply rounded-lg my-4 max-w-full h-auto; }
