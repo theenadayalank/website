@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "packageManager": "pnpm@9.15.0",
-  "description": "Source Code of www.theenadayalan.me",
+  "description": "Source Code of www.theenadayalan.netlify.app",
   "author": "Theenadayalan <puduvai.theena@gmail.com>",
   "repository": "https://github.com/theenadayalank/website.git",
-  "homepage": "https://www.theenadayalan.me",
+  "homepage": "https://www.theenadayalan.netlify.app",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

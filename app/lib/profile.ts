@@ -9,7 +9,7 @@ export const site = {
   company: "Apollo.io",
   degree: "B.Tech. in Computer Science and Engineering",
   resumePath: "/Theenadayalan_Resume.pdf",
-  url: "https://www.theenadayalan.me",
+  url: "https://www.theenadayalan.netlify.app",
   yearsExperience: "9+",
 } as const;
 

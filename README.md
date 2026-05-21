@@ -1,4 +1,4 @@
-# www.theenadayalan.me
+# www.theenadayalan.netlify.app
 
 Portfolio and blog built with Next.js 14 (App Router), React 18, Tailwind CSS, and TypeScript.
 
@@ -91,8 +91,8 @@ Profile and resume content is edited in `app/lib/profile.ts`.
 
 ## Author
 
-**Theena Dayalan** – [theenadayalan.me](https://www.theenadayalan.me)
+**Theenadayalan Kaliamurthy** – [theenadayalan.netlify.app](https://www.theenadayalan.netlify.app)
 
 ## License
 
-MIT © [Theena Dayalan](https://www.theenadayalan.me)
+MIT © [Theenadayalan Kaliamurthy](https://www.theenadayalan.netlify.app)
