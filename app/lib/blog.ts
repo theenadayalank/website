@@ -24,7 +24,7 @@ function getSlugFromPath(filePath: string): string {
   return base === 'index' ? path.basename(path.dirname(filePath)) : base;
 }
 
-export function getAllSlugs(): string[] {
+function readDirectorySlugs(): string[] {
   if (!fs.existsSync(CONTENT_DIR)) return [];
   const entries = fs.readdirSync(CONTENT_DIR, { withFileTypes: true });
   const slugs: string[] = [];
@@ -39,6 +39,11 @@ export function getAllSlugs(): string[] {
     }
   }
   return slugs;
+}
+
+/** Slugs in reverse chronological order (matches blog list and prev/next nav). */
+export function getAllSlugs(): string[] {
+  return getAllPosts().map((post) => post.slug);
 }
 
 export function getPostBySlug(slug: string): BlogPost | null {
@@ -70,7 +75,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
 }
 
 export function getAllPosts(): BlogPost[] {
-  const slugs = getAllSlugs();
+  const slugs = readDirectorySlugs();
   return slugs
     .map((s) => getPostBySlug(s))
     .filter((p): p is BlogPost => p !== null)

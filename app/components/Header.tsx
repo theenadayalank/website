@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { site } from '@/lib/profile';
 
 export function Header() {
   const pathname = usePathname();
@@ -17,11 +18,12 @@ export function Header() {
     { href: '#skills', label: 'Skills' },
     { href: '#experience', label: 'Experience' },
     { href: '#projects', label: 'Projects' },
+    { href: '#blog', label: 'Blog' },
     { href: '#contact', label: 'Contact' },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200/60 bg-white/95 shadow-sm backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/95 dark:shadow-slate-950/50">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200/60 bg-white/95 shadow-sm backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/95">
       <nav className="mx-auto flex max-w-5xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 md:px-6">
         <Link
           href="/"
@@ -46,7 +48,7 @@ export function Header() {
             </ul>
           )}
 
-          <div className="h-px w-px flex-shrink-0 bg-slate-200 dark:bg-slate-700 sm:h-4 sm:w-px" aria-hidden />
+          <div className="hidden h-4 w-px shrink-0 bg-slate-200 dark:bg-slate-700 sm:block" aria-hidden />
 
           <ul className="flex items-center gap-4">
             {navLinks.map(({ href, label }) => {

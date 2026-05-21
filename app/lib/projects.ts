@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     title: 'lint-prepush',
     description:
-      'A popular Node.js CLI tool for running linters on committed files. Ensures code quality before pushes.',
+      'Node.js CLI tool for running linters on committed files before push.',
     techStack: ['Node.js', 'npm', 'CLI'],
     impact: '2.3M+ downloads on npm',
     links: [
@@ -25,7 +25,7 @@ export const projects: Project[] = [
   {
     title: 'YouTabMan',
     description:
-      'A Chrome and Firefox extension to manage YouTube videos. Features include play, pause, replay, and loop across multiple tabs.',
+      'Chrome and Firefox extension for managing YouTube videos across multiple tabs with playback controls.',
     techStack: ['Chrome Extension', 'Firefox Add-on', 'JavaScript'],
     impact: 'Top 5 in Firefox Quantum Extensions Challenge (Mozilla)',
     links: [
@@ -37,7 +37,7 @@ export const projects: Project[] = [
   {
     title: 'react-otpify',
     description:
-      'A customizable and accessible React component for handling OTP (One-Time Password) input.',
+      'Customizable and accessible React component library for OTP input handling.',
     techStack: ['React', 'TypeScript'],
     github: 'https://github.com/theenadayalank/react-otpify',
     date: '2022',

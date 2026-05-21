@@ -12,23 +12,21 @@ export function ProjectCard({ project }: ProjectCardProps) {
   ];
 
   return (
-    <article className="group rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 shadow-sm hover:shadow-md hover:border-primary/30 dark:hover:border-primary/30 transition-all duration-200">
-      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-        {project.title}
-      </h3>
-      <div className="w-10 h-0.5 bg-primary mb-4" />
-      <p className="text-slate-600 dark:text-slate-400 mb-4 text-sm leading-relaxed">
+    <article className="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-200 hover:border-primary/30 hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:hover:border-primary/30">
+      <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-white">{project.title}</h3>
+      <div className="mb-4 h-0.5 w-10 bg-primary" aria-hidden />
+      <p className="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
         {project.description}
       </p>
       {project.impact && (
-        <p className="text-sm font-medium text-primary mb-2">{project.impact}</p>
+        <p className="mb-2 text-sm font-medium text-primary">{project.impact}</p>
       )}
       {project.techStack.length > 0 && (
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="mb-4 flex flex-wrap gap-2">
           {project.techStack.map((tech) => (
             <span
               key={tech}
-              className="text-xs px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400"
+              className="rounded-full bg-slate-100 px-2 py-1 text-xs text-slate-600 dark:bg-slate-800 dark:text-slate-400"
             >
               {tech}
             </span>
@@ -49,9 +47,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         ))}
       </div>
       {project.date && (
-        <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">
-          {project.date}
-        </p>
+        <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">{project.date}</p>
       )}
     </article>
   );

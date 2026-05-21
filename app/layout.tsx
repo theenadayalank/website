@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { site } from '@/lib/profile';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
 
@@ -13,19 +14,21 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.theenadayalan.me'),
+  metadataBase: new URL(site.url),
   title: {
-    default: 'Theenadayalan | Front End Engineer',
-    template: '%s | Theenadayalan',
+    default: `${site.name} | Front End Engineer`,
+    template: `%s | ${site.name}`,
   },
-  description:
-    "Theenadayalan — Senior Frontend Engineer at Apollo.io. 7+ years building web apps with React, TypeScript, Next.js.",
+  description: `${site.fullName} — ${site.headline} with ${site.yearsExperience} years building web apps with React, TypeScript, and Next.js.`,
   keywords: ['Front End Engineer', 'React', 'TypeScript', 'Next.js', 'Web Development'],
+  icons: {
+    icon: '/favicon-32.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Theenadayalan',
-    url: 'https://www.theenadayalan.me',
+    siteName: site.name,
+    url: site.url,
   },
   robots: { index: true, follow: true },
 };
@@ -37,7 +40,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="min-h-screen flex flex-col antialiased">
+      <body className="flex min-h-screen flex-col antialiased font-sans">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
