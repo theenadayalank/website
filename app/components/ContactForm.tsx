@@ -1,6 +1,8 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { FormEvent, useState } from 'react';
+import { site } from '@/lib/profile';
+import { SectionHeading } from './SectionHeading';
 
 export function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
@@ -26,9 +28,14 @@ export function ContactForm() {
     setErrors(err);
     if (Object.keys(err).length > 0) return;
 
+    const name = (formData.get('name') as string).trim();
+    const email = (formData.get('email') as string).trim();
+    const message = (formData.get('message') as string).trim();
+
     setStatus('sending');
     try {
-      await new Promise((r) => setTimeout(r, 800));
+      const mailto = `mailto:${site.email}?subject=${encodeURIComponent(`Portfolio contact from ${name}`)}&body=${encodeURIComponent(`From: ${name} <${email}>\n\n${message}`)}`;
+      window.location.href = mailto;
       setStatus('success');
       form.reset();
     } catch {
@@ -39,17 +46,11 @@ export function ContactForm() {
   return (
     <section id="contact" className="section-padding bg-white dark:bg-slate-950">
       <div className="container-narrow">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-2">
-          CONTACT
-        </h2>
-        <div className="w-12 h-0.5 bg-primary mx-auto mb-4" />
-        <p className="text-center text-slate-600 dark:text-slate-400 mb-8">
-          <em>Get in touch</em>
-        </p>
+        <SectionHeading title="CONTACT" subtitle="Get in touch" />
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+            <label htmlFor="name" className="mb-1 block text-sm font-medium text-slate-700 dark:text-slate-300">
               Name
             </label>
             <input
@@ -57,15 +58,13 @@ export function ContactForm() {
               name="name"
               type="text"
               required
-              className="w-full rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-4 py-2 text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary"
+              className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2 text-slate-900 focus:border-primary focus:ring-1 focus:ring-primary dark:border-slate-600 dark:bg-slate-900 dark:text-white"
               placeholder="Your name"
             />
-            {errors.name && (
-              <p className="mt-1 text-sm text-red-600">{errors.name}</p>
-            )}
+            {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+            <label htmlFor="email" className="mb-1 block text-sm font-medium text-slate-700 dark:text-slate-300">
               Email
             </label>
             <input
@@ -73,15 +72,13 @@ export function ContactForm() {
               name="email"
               type="email"
               required
-              className="w-full rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-4 py-2 text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary"
+              className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2 text-slate-900 focus:border-primary focus:ring-1 focus:ring-primary dark:border-slate-600 dark:bg-slate-900 dark:text-white"
               placeholder="you@example.com"
             />
-            {errors.email && (
-              <p className="mt-1 text-sm text-red-600">{errors.email}</p>
-            )}
+            {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
           </div>
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+            <label htmlFor="message" className="mb-1 block text-sm font-medium text-slate-700 dark:text-slate-300">
               Message
             </label>
             <textarea
@@ -89,7 +86,7 @@ export function ContactForm() {
               name="message"
               rows={4}
               required
-              className="w-full rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-4 py-2 text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary resize-y"
+              className="w-full resize-y rounded-lg border border-slate-300 bg-white px-4 py-2 text-slate-900 focus:border-primary focus:ring-1 focus:ring-primary dark:border-slate-600 dark:bg-slate-900 dark:text-white"
               placeholder="Your message"
             />
             {errors.message && (
@@ -99,26 +96,26 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={status === 'sending'}
-            className="w-full rounded-lg bg-primary py-3 font-medium text-white hover:bg-primary-dark disabled:opacity-50 transition-colors"
+            className="w-full rounded-lg bg-primary py-3 font-medium text-white transition-colors hover:bg-primary-dark disabled:opacity-50"
           >
-            {status === 'sending' ? 'Sending...' : 'Send message'}
+            {status === 'sending' ? 'Opening email…' : 'Send message'}
           </button>
           {status === 'success' && (
-            <p className="text-center text-green-600 dark:text-green-400 text-sm">
-              Thanks! Your message was sent.
+            <p className="text-center text-sm text-green-600 dark:text-green-400">
+              Your email client should open with your message ready to send.
             </p>
           )}
           {status === 'error' && (
-            <p className="text-center text-red-600 dark:text-red-400 text-sm">
-              Something went wrong. Please try again or email directly.
+            <p className="text-center text-sm text-red-600 dark:text-red-400">
+              Something went wrong. Please email directly.
             </p>
           )}
         </form>
 
-        <p className="mt-4 text-center text-sm text-slate-500 dark:text-slate-400">
+        <p className="mt-6 text-center text-sm text-slate-500 dark:text-slate-400">
           Or email me at{' '}
-          <a href="mailto:theenadayalan06@gmail.com" className="text-primary hover:underline">
-            theenadayalan06@gmail.com
+          <a href={`mailto:${site.email}`} className="text-primary hover:underline">
+            {site.email}
           </a>
         </p>
       </div>

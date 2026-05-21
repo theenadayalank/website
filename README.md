@@ -8,7 +8,7 @@ Portfolio and blog built with Next.js 14 (App Router), React 18, Tailwind CSS, a
 - **React**: 18.x
 - **Styling**: Tailwind CSS 3
 - **Language**: TypeScript
-- **Content**: Markdown (gray-matter) for blog posts
+- **Content**: Markdown (`gray-matter` + `react-markdown`) for blog posts
 - **Package Manager**: pnpm
 
 ## Prerequisites
@@ -40,11 +40,11 @@ pnpm build
 
 ### Where does the build go?
 
-| Path | Purpose |
-|------|---------|
-| **`.next/`** | **`pnpm build` writes here.** Compiled app, server bundles, static assets for production. This folder is **not** committed to git. Run `pnpm start` to serve it. |
-| **`public/`** | **Static files you add** (images, PDF, `favicon.ico`). Next.js serves them at the site root (e.g. `public/img/x.jpg` → `/img/x.jpg`). **Build output is never written into `public/`.** |
-| **`out/`** | Only if you enable [static export](https://nextjs.org/docs/app/building-your-application/deploying/static-exports) (`output: 'export'` in `next.config`). Then `pnpm build` produces a static site in `out/`, still **not** in `public/`. |
+| Path          | Purpose                                                                                                                                                                                                                                   |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`.next/`**  | **`pnpm build` writes here.** Compiled app, server bundles, static assets for production. This folder is **not** committed to git. Run `pnpm start` to serve it.                                                                          |
+| **`public/`** | **Static files you add** (images, PDF, `favicon.ico`). Next.js serves them at the site root (e.g. `public/img/x.jpg` → `/img/x.jpg`). **Build output is never written into `public/`.**                                                   |
+| **`out/`**    | Only if you enable [static export](https://nextjs.org/docs/app/building-your-application/deploying/static-exports) (`output: 'export'` in `next.config`). Then `pnpm build` produces a static site in `out/`, still **not** in `public/`. |
 
 So: **`public/` = your static assets only; `.next/` = build output.**
 
@@ -60,33 +60,27 @@ pnpm start
 ```
 ├── app/
 │   ├── layout.tsx       # Root layout, metadata
-│   ├── page.tsx         # Homepage (single-page portfolio)
+│   ├── page.tsx         # Homepage
 │   ├── globals.css
 │   ├── components/      # UI components
-│   ├── lib/             # Blog helpers, projects data
-│   ├── blog/
-│   │   ├── page.tsx     # Blog index
-│   │   └── [slug]/      # Individual post
+│   ├── lib/             # Profile data, blog helpers, projects
+│   ├── blog/            # Blog index and post pages
 │   ├── sitemap.ts
 │   ├── robots.ts
 │   └── not-found.tsx
 ├── content/blog/        # Markdown posts
-└── public/
-    ├── img/             # profile.jpg, header-bg.jpg
-    └── Theenadayalan_Resume.pdf
+└── public/              # Static assets (images, resume PDF)
 ```
 
-## Manual Setup
+## Assets
 
-1. **Images**: Add to `public/img/`:
-   - `profile.jpg` – About section photo
-   - `header-bg.jpg` – Hero background
+Place static files directly in `public/`:
 
-2. **Resume**: Add `Theenadayalan_Resume.pdf` to `public/` for the Hero download link.
+- `public/img/profile.jpg`, `public/img/header-bg.jpg`
+- `public/Theenadayalan_Resume.pdf`
+- `public/blog/[slug]/` for blog post images
 
-3. **Blog images**: For posts with images (e.g. `![alt](./image.jpg)`), place files in `public/blog/[slug]/` and reference as `/blog/[slug]/image.jpg` or use relative `./image.jpg` (requires files in `public/blog/[slug]/`).
-
-4. **Contact form**: Wire `app/components/ContactForm.tsx` to Formspree or EmailJS.
+Profile and resume content is edited in `app/lib/profile.ts`.
 
 ## Deploy (Vercel)
 

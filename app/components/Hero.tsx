@@ -1,36 +1,46 @@
+import Image from 'next/image';
 import Link from 'next/link';
+import { overview, site } from '@/lib/profile';
 
 export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[90vh] flex items-center justify-center bg-slate-800 text-white overflow-hidden"
+      className="relative flex min-h-[88vh] items-center justify-center overflow-hidden bg-slate-800 text-white"
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
-        style={{ backgroundImage: "url('/img/header-bg.jpg')" }}
+      <Image
+        src="/img/header-bg.jpg"
+        alt=""
+        fill
+        priority
+        className="object-cover opacity-40"
+        sizes="100vw"
       />
-      <div className="relative z-10 text-center px-4 max-w-3xl">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide mb-4">
-          What We think, We Become.
-        </h1>
-        <p className="text-lg md:text-xl text-slate-200 mb-8">
-          Are you ready to know my cup of coffee??? ☕
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-800/70 to-slate-800" />
+      <div className="relative z-10 mx-auto max-w-3xl px-4 text-center">
+        <p className="mb-4 text-sm font-medium uppercase tracking-widest text-slate-300">
+          {site.headline}
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+        <h1 className="text-3xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+          {site.fullName}
+        </h1>
+        <p className="mt-6 text-lg text-slate-200 md:text-xl">
+          {overview.summary}
+        </p>
+        <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
           <Link
             href="#about"
-            className="inline-block rounded-full bg-primary px-8 py-3 font-medium text-white shadow-lg hover:bg-primary-dark transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 font-medium text-white shadow-lg transition-colors hover:bg-primary-dark focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800"
           >
-            Getting Started
+            View profile
           </Link>
           <a
-            href="/Theenadayalan_Resume.pdf"
+            href={site.resumePath}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-full border-2 border-white/80 px-8 py-3 font-medium text-white hover:bg-white/10 transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800"
+            className="inline-flex items-center justify-center rounded-full border-2 border-white/80 px-8 py-3 font-medium text-white transition-colors hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800"
           >
-            Download Resume
+            Download resume
           </a>
         </div>
       </div>

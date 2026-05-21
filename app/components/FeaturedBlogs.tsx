@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getLatestPosts } from '@/lib/blog';
+import { SectionHeading } from './SectionHeading';
 
 export async function FeaturedBlogs() {
   const posts = getLatestPosts(3);
@@ -8,13 +9,8 @@ export async function FeaturedBlogs() {
     return (
       <section id="blog" className="section-padding bg-slate-50 dark:bg-slate-900/50">
         <div className="container-wide">
-          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-2">
-            BLOG
-          </h2>
-          <div className="w-12 h-0.5 bg-primary mx-auto mb-4" />
-          <p className="text-center text-slate-600 dark:text-slate-400">
-            No posts yet. Visit later!
-          </p>
+          <SectionHeading title="BLOG" />
+          <p className="text-center text-slate-600 dark:text-slate-400">No posts yet. Visit later!</p>
         </div>
       </section>
     );
@@ -23,28 +19,22 @@ export async function FeaturedBlogs() {
   return (
     <section id="blog" className="section-padding bg-slate-50 dark:bg-slate-900/50">
       <div className="container-wide">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-2">
-          FEATURED BLOGS
-        </h2>
-        <div className="w-12 h-0.5 bg-primary mx-auto mb-4" />
-        <p className="text-center text-slate-600 dark:text-slate-400 mb-12">
-          <em>Latest posts</em>
-        </p>
+        <SectionHeading title="FEATURED BLOGS" subtitle="Latest posts" />
 
-        <ul className="space-y-6 max-w-2xl mx-auto">
+        <ul className="mx-auto max-w-2xl space-y-6">
           {posts.map((post) => (
             <li key={post.slug}>
               <Link
                 href={`/blog/${post.slug}`}
-                className="block rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-5 hover:border-primary/30 hover:shadow-md transition-all"
+                className="block rounded-lg border border-slate-200 bg-white p-5 transition-all hover:border-primary/30 hover:shadow-md dark:border-slate-700 dark:bg-slate-900"
               >
-                <h3 className="font-semibold text-slate-900 dark:text-white mb-1">
+                <h3 className="mb-1 font-semibold text-slate-900 dark:text-white">
                   {post.frontmatter.title}
                 </h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400 mb-2">
+                <p className="mb-2 text-sm text-slate-500 dark:text-slate-400">
                   {post.frontmatter.date}
                 </p>
-                <p className="text-slate-600 dark:text-slate-400 text-sm line-clamp-2">
+                <p className="line-clamp-2 text-sm text-slate-600 dark:text-slate-400">
                   {post.excerpt}
                 </p>
               </Link>
@@ -52,7 +42,7 @@ export async function FeaturedBlogs() {
           ))}
         </ul>
 
-        <p className="text-center mt-8">
+        <p className="mt-8 text-center">
           <Link
             href="/blog"
             className="inline-flex items-center gap-1 font-medium text-primary hover:underline"
