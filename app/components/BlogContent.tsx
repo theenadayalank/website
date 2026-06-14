@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -32,36 +31,18 @@ export function BlogContent({ content, slug }: BlogContentProps) {
             {children}
           </a>
         ),
-        img: ({ src, alt }) => {
-          const resolvedSrc = resolveImageSrc(src, slug);
-          const isLocal = resolvedSrc.startsWith('/') && !resolvedSrc.startsWith('//');
-          if (isLocal) {
-            return (
-              <span className="block my-4 relative w-full min-h-[200px] max-w-2xl">
-                <Image
-                  src={resolvedSrc}
-                  alt={alt ?? 'Blog image'}
-                  width={672}
-                  height={378}
-                  className="rounded-lg w-full h-auto object-contain"
-                  sizes="(max-width: 768px) 100vw, 672px"
-                />
-              </span>
-            );
-          }
-          return (
-            <span className="block my-4">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={resolvedSrc || ''}
-                alt={alt ?? ''}
-                className="rounded-lg max-w-full h-auto"
-                loading="lazy"
-                decoding="async"
-              />
-            </span>
-          );
-        },
+        // eslint-disable-next-line @next/next/no-img-element
+        img: ({ src, alt }) => (
+          <span className="block my-4">
+            <img
+              src={resolveImageSrc(src, slug)}
+              alt={alt ?? ''}
+              className="rounded-lg max-w-full h-auto"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+        ),
       }}
     >
       {content}

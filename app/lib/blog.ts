@@ -65,7 +65,19 @@ export function getPostBySlug(slug: string): BlogPost | null {
   const { data, content } = matter(raw);
   const frontmatter = data as BlogFrontmatter;
   const pathSlug = frontmatter.path ?? slug;
-  const excerpt = content.slice(0, 250).replace(/#+/g, '').trim();
+  const excerpt = content
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/`[^`]*`/g, '')
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/^#{1,6}\s*/gm, '')
+    .replace(/[*_~]/g, '')
+    .replace(/^\s*>\s*/gm, '')
+    .replace(/^\s*[-*+]\s/gm, '')
+    .replace(/\n+/g, ' ')
+    .trim()
+    .slice(0, 250)
+    .trim();
   return {
     slug: pathSlug,
     frontmatter: { ...frontmatter, path: pathSlug },

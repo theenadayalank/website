@@ -31,7 +31,7 @@ export function About() {
             </p>
             <p>{site.degree}</p>
             <p>
-              {site.title} · {site.location}
+              {site.headline} · {site.location}
             </p>
             <p>
               <a

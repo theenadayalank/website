@@ -7,7 +7,7 @@ export function Projects() {
     <section id="projects" className="section-padding bg-white dark:bg-slate-950">
       <div className="container-wide">
         <SectionHeading title="PROJECTS" subtitle="Things I've built" />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2">
           {projects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}

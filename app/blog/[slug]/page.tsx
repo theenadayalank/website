@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getAllSlugs, getPostBySlug } from '@/lib/blog';
+import { getAllPosts } from '@/lib/blog';
 import { BlogContent } from '@/components/BlogContent';
 import { site, social } from '@/lib/profile';
 import type { Metadata } from 'next';
@@ -10,13 +10,12 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  const slugs = getAllSlugs();
-  return slugs.map((slug) => ({ slug }));
+  return getAllPosts().map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = getAllPosts().find((p) => p.slug === slug);
   if (!post) return { title: 'Post not found' };
   return {
     title: post.frontmatter.title,
@@ -26,15 +25,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const allPosts = getAllPosts();
+  const post = allPosts.find((p) => p.slug === slug) ?? null;
   if (!post) notFound();
 
-  const allSlugs = getAllSlugs();
-  const idx = allSlugs.indexOf(slug);
-  const prevSlug = idx > 0 ? allSlugs[idx - 1] : null;
-  const nextSlug = idx >= 0 && idx < allSlugs.length - 1 ? allSlugs[idx + 1] : null;
-  const prevPost = prevSlug ? getPostBySlug(prevSlug) : null;
-  const nextPost = nextSlug ? getPostBySlug(nextSlug) : null;
+  const idx = allPosts.indexOf(post);
+  // allPosts is newest-first: higher index = older. "Previous" = older, "Next" = newer.
+  const prevPost = idx < allPosts.length - 1 ? allPosts[idx + 1] : null;
+  const nextPost = idx > 0 ? allPosts[idx - 1] : null;
 
   return (
     <article className="section-padding">
@@ -87,7 +85,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             .
           </p>
 
-          <nav className="flex flex-wrap justify-between gap-4">
+          <nav aria-label="Post navigation" className="flex flex-wrap justify-between gap-4">
             <div>
               {prevPost && (
                 <Link

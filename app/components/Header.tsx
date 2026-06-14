@@ -4,23 +4,23 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { site } from '@/lib/profile';
 
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/blog', label: 'Blog' },
+];
+
+const sectionLinks = [
+  { href: '#about', label: 'About' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#blog', label: 'Blog' },
+  { href: '#contact', label: 'Contact' },
+];
+
 export function Header() {
   const pathname = usePathname();
   const isHome = pathname === '/';
-
-  const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/blog', label: 'Blog' },
-  ];
-
-  const sectionLinks = [
-    { href: '#about', label: 'About' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#experience', label: 'Experience' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#blog', label: 'Blog' },
-    { href: '#contact', label: 'Contact' },
-  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200/60 bg-white/95 shadow-sm backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/95">
@@ -48,7 +48,7 @@ export function Header() {
             </ul>
           )}
 
-          <div className="hidden h-4 w-px shrink-0 bg-slate-200 dark:bg-slate-700 sm:block" aria-hidden />
+          {isHome && <div className="hidden h-4 w-px shrink-0 bg-slate-200 dark:bg-slate-700 sm:block" aria-hidden />}
 
           <ul className="flex items-center gap-4">
             {navLinks.map(({ href, label }) => {

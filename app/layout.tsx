@@ -16,7 +16,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} | Front End Engineer`,
+    default: `${site.name} | ${site.headline}`,
     template: `%s | ${site.name}`,
   },
   description: `${site.fullName} — ${site.headline} with ${site.yearsExperience} years building web apps with React, TypeScript, and Next.js.`,

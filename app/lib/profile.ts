@@ -1,7 +1,6 @@
 export const site = {
   name: "Theenadayalan",
   fullName: "THEENADAYALAN KALIAMURTHY",
-  title: "Senior Software Engineer",
   headline: "Senior Frontend Engineer",
   tagline: "Solve Together!",
   email: "theenadayalan06@gmail.com",

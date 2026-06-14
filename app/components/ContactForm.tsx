@@ -5,7 +5,7 @@ import { site } from '@/lib/profile';
 import { SectionHeading } from './SectionHeading';
 
 export function ContactForm() {
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success'>('idle');
   const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({});
 
   function validate(form: FormData): { name?: string; email?: string; message?: string } {
@@ -33,14 +33,10 @@ export function ContactForm() {
     const message = (formData.get('message') as string).trim();
 
     setStatus('sending');
-    try {
-      const mailto = `mailto:${site.email}?subject=${encodeURIComponent(`Portfolio contact from ${name}`)}&body=${encodeURIComponent(`From: ${name} <${email}>\n\n${message}`)}`;
-      window.location.href = mailto;
-      setStatus('success');
-      form.reset();
-    } catch {
-      setStatus('error');
-    }
+    const mailto = `mailto:${site.email}?subject=${encodeURIComponent(`Portfolio contact from ${name}`)}&body=${encodeURIComponent(`From: ${name} <${email}>\n\n${message}`)}`;
+    window.location.href = mailto;
+    setStatus('success');
+    form.reset();
   }
 
   return (
@@ -96,6 +92,7 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={status === 'sending'}
+            aria-busy={status === 'sending'}
             className="w-full rounded-lg bg-primary py-3 font-medium text-white transition-colors hover:bg-primary-dark disabled:opacity-50"
           >
             {status === 'sending' ? 'Opening email…' : 'Send message'}
@@ -103,11 +100,6 @@ export function ContactForm() {
           {status === 'success' && (
             <p className="text-center text-sm text-green-600 dark:text-green-400">
               Your email client should open with your message ready to send.
-            </p>
-          )}
-          {status === 'error' && (
-            <p className="text-center text-sm text-red-600 dark:text-red-400">
-              Something went wrong. Please email directly.
             </p>
           )}
         </form>
