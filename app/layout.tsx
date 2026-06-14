@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     default: `${site.name} | ${site.headline}`,
     template: `%s | ${site.name}`,
   },
-  description: `${site.fullName} — ${site.headline} with ${site.yearsExperience} years building web apps with React, TypeScript, and Next.js.`,
+  description: `${site.name} — ${site.headline} with ${site.yearsExperience} years architecting scalable web apps with React, TypeScript, and Next.js.`,
   keywords: ['Front End Engineer', 'React', 'TypeScript', 'Next.js', 'Web Development'],
   icons: {
     icon: '/favicon-32.png',

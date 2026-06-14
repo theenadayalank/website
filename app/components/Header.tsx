@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { site } from '@/lib/profile';
 
 const navLinks = [
   { href: '/', label: 'Home' },

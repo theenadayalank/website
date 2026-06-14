@@ -42,7 +42,7 @@ export function ContactForm() {
   return (
     <section id="contact" className="section-padding bg-slate-50 dark:bg-slate-900/50">
       <div className="container-narrow">
-        <SectionHeading title="CONTACT" subtitle="Get in touch" />
+        <SectionHeading title="Contact" subtitle="Get in touch" />
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>

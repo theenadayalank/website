@@ -7,13 +7,6 @@ export function About() {
     <section id="about" className="section-padding bg-white dark:bg-slate-950">
       <div className="container-wide">
         <SectionHeading title="About me" subtitle={site.tagline} />
-        <p className="mx-auto mb-6 max-w-2xl text-center text-lg text-slate-600 dark:text-slate-400">
-          {overview.summary}
-        </p>
-        <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-slate-600 dark:text-slate-400">
-          {overview.extended}
-        </p>
-
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-8 md:flex-row md:items-start">
           <div className="relative h-64 w-64 shrink-0 overflow-hidden rounded-xl border border-slate-200 bg-slate-100 shadow-lg dark:border-slate-700 dark:bg-slate-800 md:h-80 md:w-80">
             <Image
@@ -41,6 +34,7 @@ export function About() {
                 {site.email}
               </a>
             </p>
+            <p className="pt-2 text-base leading-relaxed">{overview.extended}</p>
           </div>
         </div>
       </div>

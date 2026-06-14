@@ -19,7 +19,7 @@ export async function FeaturedBlogs() {
   return (
     <section id="blog" className="section-padding bg-white dark:bg-slate-950">
       <div className="container-wide">
-        <SectionHeading title="FEATURED BLOGS" subtitle="Latest posts" />
+        <SectionHeading title="Featured Blogs" subtitle="Latest posts" />
 
         <ul className="mx-auto max-w-2xl space-y-6">
           {posts.map((post) => (
