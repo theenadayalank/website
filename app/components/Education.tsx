@@ -19,6 +19,9 @@ export function Education() {
           <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
             {education.period} · {education.location}
           </p>
+          <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+            GPA: {education.gpa}
+          </p>
         </article>
       </div>
     </section>

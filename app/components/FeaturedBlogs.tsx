@@ -7,7 +7,7 @@ export async function FeaturedBlogs() {
 
   if (posts.length === 0) {
     return (
-      <section id="blog" className="section-padding bg-slate-50 dark:bg-slate-900/50">
+      <section id="blog" className="section-padding bg-white dark:bg-slate-950">
         <div className="container-wide">
           <SectionHeading title="BLOG" />
           <p className="text-center text-slate-600 dark:text-slate-400">No posts yet. Visit later!</p>
@@ -17,7 +17,7 @@ export async function FeaturedBlogs() {
   }
 
   return (
-    <section id="blog" className="section-padding bg-slate-50 dark:bg-slate-900/50">
+    <section id="blog" className="section-padding bg-white dark:bg-slate-950">
       <div className="container-wide">
         <SectionHeading title="FEATURED BLOGS" subtitle="Latest posts" />
 

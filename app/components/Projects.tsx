@@ -4,7 +4,7 @@ import { SectionHeading } from './SectionHeading';
 
 export function Projects() {
   return (
-    <section id="projects" className="section-padding bg-white dark:bg-slate-950">
+    <section id="projects" className="section-padding bg-slate-50 dark:bg-slate-900/50">
       <div className="container-wide">
         <SectionHeading title="PROJECTS" subtitle="Things I've built" />
         <div className="grid gap-6 sm:grid-cols-2">

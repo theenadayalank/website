@@ -40,7 +40,7 @@ export function ContactForm() {
   }
 
   return (
-    <section id="contact" className="section-padding bg-white dark:bg-slate-950">
+    <section id="contact" className="section-padding bg-slate-50 dark:bg-slate-900/50">
       <div className="container-narrow">
         <SectionHeading title="CONTACT" subtitle="Get in touch" />
 
