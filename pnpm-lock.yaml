@@ -45,6 +45,9 @@ importers:
       eslint-config-next:
         specifier: ^14.2.0
         version: 14.2.35(eslint@8.57.1)(typescript@5.9.3)
+      lint-prepush:
+        specifier: ^3.0.3
+        version: link:../lint-prepush
       postcss:
         specifier: ^8.4.0
         version: 8.5.6
