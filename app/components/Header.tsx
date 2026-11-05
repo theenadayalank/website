@@ -3,10 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/blog', label: 'Blog' },
-];
+const navLinks = [{ href: '/', label: 'Home' }];
 
 const sectionLinks = [
   { href: '#about', label: 'About' },

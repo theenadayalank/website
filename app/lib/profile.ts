@@ -5,7 +5,6 @@ export const site = {
   tagline: "Solve Together!",
   email: "theenadayalan06@gmail.com",
   location: "Pondicherry, India",
-  company: "Apollo.io",
   degree: "B.Tech. in Computer Science and Engineering",
   resumePath: "/Theenadayalan_Resume.pdf",
   url: "https://www.theenadayalan.netlify.app",
@@ -23,14 +22,6 @@ export const overview = {
     "Senior Frontend Engineer with 9+ years of experience architecting scalable, high-performance web applications across fintech, edtech, and SaaS. Expertise in React.js, TypeScript, Micro Frontend Architecture, Web Accessibility (a11y), and REST APIs.",
   extended:
     "Proven record of owning end-to-end feature delivery, driving architecture decisions, mentoring engineers, and leveraging AI-assisted workflows to maximise productivity.",
-} as const;
-
-export const education = {
-  degree: "B.Tech. in Computer Science and Engineering",
-  school: "Pondicherry University",
-  period: "2013 – 2017",
-  location: "Pondicherry, India",
-  gpa: "8.4 / 10",
 } as const;
 
 export const skills = [
@@ -71,6 +62,28 @@ export interface ExperienceEntry {
 }
 
 export const experience: ExperienceEntry[] = [
+  {
+    role: "Senior Frontend Engineer",
+    company: "OCBC Bank",
+    duration: "August 2026 – Present",
+    location: "Singapore",
+    highlights: [
+      "Leading the migration of a bank's internal credit card application processing portal to a Micro Frontend Architecture using Webpack Module Federation, with the goal of independently deployable modules.",
+      "Driving frontend architecture and technical design decisions in React.js and TypeScript, including how the portal is divided into micro frontend modules.",
+      "Using Devin AI to accelerate development and migration tasks while working with backend, QA, and product stakeholders.",
+    ],
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "JavaScript",
+      "CSS",
+      "Webpack Module Federation",
+      "Micro Frontends",
+      "Devin AI",
+      "Git",
+      "CI/CD",
+    ],
+  },
   {
     role: "Senior Frontend Engineer",
     company: "Apollo.io",
