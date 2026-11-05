@@ -12,3 +12,5 @@
 # Keep built output ignored; public assets are committed
 /public/.DS_Store
 /.next/
+# TypeScript incremental build info
+*.tsbuildinfo

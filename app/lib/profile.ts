@@ -176,13 +176,3 @@ export const experience: ExperienceEntry[] = [
     ],
   },
 ];
-
-export const achievements = [
-  {
-    title: "Firefox Quantum Extensions Challenge 2018",
-    description:
-      "YouTabMan was shortlisted among the top five extensions in Mozilla's Firefox Quantum Extensions Challenge.",
-  },
-] as const;
-
-export const languages = ["English", "Tamil"] as const;
